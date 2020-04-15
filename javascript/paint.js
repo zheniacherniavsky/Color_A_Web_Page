@@ -1,6 +1,6 @@
 function drawTable() {
 	let pixelSize = 32; // px
-	document.write("<table>");
+	document.write("<table id='paint'>");
 	let tableHeight = 0;
 	while(tableHeight <= window.innerHeight-5) {
 		document.write("<tr>");
@@ -27,18 +27,19 @@ $(document).ready(function() {
  		});
 	})
 
-	$("table").mousedown(function(){ 
+	$("#paint").mousedown(function(){ 
 	    paint = true;
 	    $("#configIcon").fadeOut("fast");
 	});
-	$("table").mouseup(function(){ 
+	$("#paint").mouseup(function(){ 
 	    paint = false;
 	    $("#configIcon").fadeIn("fast");
 	});
 
 	$("td").hover(function() {
 		if(paint) {
-			$(this).addClass('activeTD');
+			$(this).removeClass();
+			$(this).addClass(color);
 			$(this).addClass('hoverTD');
 		}
 	}, function() {

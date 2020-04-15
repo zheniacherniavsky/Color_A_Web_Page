@@ -15,7 +15,7 @@ a:hover {
 
 /* ---- PAINT ----- */
 
-table {
+#paint {
 	display: none;
 	z-index: -1;
     border-collapse: collapse;
@@ -23,14 +23,9 @@ table {
     user-select: none;
 }
 
-td {
+#paint td {
 	border: 1px solid rgb(0,0,0,0.1);
 	padding: 15px;
-}
-
-.activeTD {
-	background-color: black;
-	border:none;
 }
 
 .hoverTD {
